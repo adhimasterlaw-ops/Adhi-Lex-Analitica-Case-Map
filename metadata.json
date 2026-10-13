@@ -1,0 +1,6 @@
+{
+  "name": "Sistem Telaah Perkara Pidana",
+  "description": "Aplikasi analisis perkara pidana terstruktur dan non-konklusif untuk memetakan fakta, klaim, kronologi, bukti, dan pemenuhan unsur pasal secara objektif.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+  
+  .font-serif-heading {
+    font-family: 'Cinzel', serif;
+  }
+
+  .font-serif-elegant {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  .font-mono-code {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Print Specific Rules */
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+    font-size: 10pt;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .page-break-inside-avoid {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .page-break-after-always {
+    break-after: page;
+    page-break-after: always;
+  }
+
+  /* Watermark for print */
+  .print-watermark {
+    position: fixed;
+    top: 35%;
+    left: 5%;
+    right: 5%;
+    transform: rotate(-28deg);
+    font-size: 48pt;
+    font-weight: 800;
+    color: rgba(220, 38, 38, 0.08);
+    text-transform: uppercase;
+    text-align: center;
+    pointer-events: none;
+    z-index: 9999;
+    letter-spacing: 0.1em;
+  }
+}
+
+@media screen {
+  .print-only {
+    display: none !important;
+  }
+}
